@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("@openzeppelin/hardhat-upgrades");
 
 // Go to https://www.alchemyapi.io, sign up, create
 // a new App in its dashboard, and replace "KEY" with its key
@@ -14,11 +15,11 @@ const ROPSTEN_PRIVATE_KEY = "YOUR ROPSTEN PRIVATE KEY";
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.7.3",
-  networks: {
-    ropsten: {
-      url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
-      accounts: [`${ROPSTEN_PRIVATE_KEY}`]
-    }
-  }
+  solidity: "0.8.4",
+  // networks: {
+  //   ropsten: {
+  //     url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+  //     accounts: [`${ROPSTEN_PRIVATE_KEY}`]
+  //   }
+  // }
 };
